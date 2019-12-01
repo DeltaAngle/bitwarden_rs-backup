@@ -17,3 +17,5 @@ then
 else
   echo "$(date "+%F %T") - Backup unsuccessfull"
 fi
+
+/usr/bin/tar -zcf /backup/bw_backup.tgz /data/
