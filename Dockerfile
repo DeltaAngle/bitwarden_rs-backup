@@ -5,11 +5,12 @@ RUN addgroup -S app && adduser -S -G app app
 RUN apk add --no-cache \
     sqlite \
     busybox-suid \
-    su-exec
+    su-exec \
+    rclone
 
 ENV DB_FILE /data/db.sqlite3
 ENV BACKUP_FILE /data/db_backup/backup.sqlite3
-ENV CRON_TIME "0 5 * * *"
+ENV CRON_TIME "0 * * * *"
 ENV TIMESTAMP false
 ENV UID 100
 ENV GID 100
