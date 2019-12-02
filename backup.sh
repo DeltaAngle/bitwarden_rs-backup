@@ -18,6 +18,7 @@ else
   echo "$(date "+%F %T") - Backup unsuccessfull"
 fi
 
+cd /
 tar -zcf /backup/bw_backup.tgz data/
 
 #rclone --config="/rclone/rclone.conf" sync /backup GDrive:Bitwarden_Backup
