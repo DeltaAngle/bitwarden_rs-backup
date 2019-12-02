@@ -20,4 +20,4 @@ fi
 
 tar -zcf /backup/bw_backup.tgz data/
 
-#rclone --config="/rclone/rclone.conf" sync /backup GDrive:Bitwarden_Backup
+rclone --config="/rclone/rclone.conf" sync /backup GDrive:Bitwarden_Backup
